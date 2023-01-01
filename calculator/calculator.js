@@ -64,11 +64,12 @@ function cl() {
     s=s.substring(0,s.length-1)
     par.textContent = s
 }
+const arr = []
+const str = []
 function equal() {
+    // console.log(s)
     let a = s.length
     let st = ""
-    const arr = []
-    const str = []
     let x = 0
     for (let i = 1; i < a; i++) {
         if (s[i] >= '0' && s[i] <= '9') {
@@ -80,6 +81,7 @@ function equal() {
         }
     }
     arr[x++] = parseInt(st)
+    st=""
     x = 0
     for (let i = 1; i < a; i++) {
         if (!(s[i] >= '0' && s[i] <= '9')) {
@@ -122,5 +124,9 @@ function equal() {
     }
     // ans=s+"="+ans
     par.textContent = ans
-    s=ans
+    s=" "
+    s+=ans
+    arr.length=0
+    str.length=0
+    // console.log(s)
 }
