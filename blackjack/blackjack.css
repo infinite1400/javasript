@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    background-image: url("blackjack_background.jpg");
+    background-size: cover;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+h1 {
+    font-size: 75px;
+    color:goldenrod;
+}
+
+p{
+    font-size: 40px;
+}
+#info{
+    color: red;
+    font-size: 20px;
+    text-align: end;
+}
+#bet,#player,#message{
+    margin: 10px;
+}
+#mess{
+    font-style: italic;
+}
+button{
+    font-size: x-large;
+    font-weight: bold;
+    width: 200px;
+    height: 40px;
+    color: #016f32;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 6px;
+    padding: 3px;
+    margin: 8px;
+}
