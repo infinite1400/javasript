@@ -12,6 +12,7 @@ let isalive = true//to check the condition is alive or not
 let sum = 0//to track sum of cards
 let start = false//to restrict the startgame button after the blackjack happens
 let money = true//to check whether the particepet has enough money or not !
+let ng = true//keep track of new game button so that it is not initialised during the game
 let messege = "Welcome! To The Blackjake Game"//string for messege paragraph
 let cards_msg = ""//string for cards paragraph
 // let sum_el=document.querySelector("#sum")
@@ -78,11 +79,14 @@ function rendergame() {
         cards_msg += " " + cards[index]
     }
     card_el.textContent = cards_msg
+    ng=false
     if (hasblackjack === true) {
         player.chips += 200
+        ng=true
     }
     else if (hasblackjack === false && isalive === false) {
         player.chips -= 100
+        ng=true
     }
     player_info.textContent = player.name + ": $" + player.chips
     if (player.chips === 0) {
@@ -102,6 +106,7 @@ function newcard() {
 }
 //new game function for resing all the things used to oringinal state
 function newgame() {
+    if (ng === true) {
         cards.length = 0
         hasblackjack = false
         isalive = false
@@ -114,4 +119,5 @@ function newgame() {
         card_el.textContent = cards_msg
         mess_el.textContent = messege
         previousend = false
+    }
 }
