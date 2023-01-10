@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "version": "2.0",
+    "name": "Link Tracker",
+    "action": {
+        "default_popup": "lead.html",
+        "default_icon": "Icon2.png"
+    },
+    "permissions":["tabs"]
+}
